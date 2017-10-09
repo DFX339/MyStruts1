@@ -1,0 +1,21 @@
+自己的struts功能简介
+1、读取struts-config.xml的配置信息  解析 <action-mappings> <action> <forward> <form-beans> <form-bean>标签信息
+2、文字编码拦截器（解决乱码问题）
+
+3、截取请求路径
+4、创建ActionMapping对象
+5、创建ActionForm对象
+6、收集表单数据
+7、判断<action>标签的forward是否为null “” ，如果不是就根据forward属性跳转
+8、创建Action类对象
+9、执行Action类的execute方法
+10.根据execute()的返回值ActionForward对象完成跳转
+
+11、自定义类型转换器（基本数据类型之间的转换，并且有容错处理）
+12、在 ActionMapping中添加 parameter属性（添加了DispatchAction）一个模块一个Action 使用了方法反射
+13、plugIng插件的标签，并且使用标签完成表单数据收集的自动转换
+
+
+需要添加的功能：
+1、继续解析struts-config.xml文件中的 标签信息 : 国际化标签，文件上传大小设定的标签，
+5、检查本框架的安全性以及效率

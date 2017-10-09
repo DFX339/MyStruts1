@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts-config>
+	
+	
+	<form-beans>
+		<form-bean name="userForm" type="cn.struts.test.UserForm"></form-bean>
+		<form-bean name="userForm1" type="cn.struts.test.UserForm1"></form-bean>
+		<form-bean name="userForm2" type="cn.struts.test.UserForm2"></form-bean>
+	</form-beans>
+	
+	<action-mappings>
+		<action path="/login1" name="userForm" scope="request" type="cn.struts.test.UserAction" >
+			<forward name="suc" path="/suc.jsp" redirect="false"></forward>
+		</action>
+		<action path="/login" name="userForm" scope="request" type="cn.struts.test.UserDispatchAction" parameter="command">
+			<forward name="suc" path="/suc.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+	
+	<plug-in className="cn.struts.extraUtils.MyPlugIn"></plug-in>
+</struts-config>
